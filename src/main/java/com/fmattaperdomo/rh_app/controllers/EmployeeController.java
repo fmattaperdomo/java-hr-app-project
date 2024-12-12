@@ -53,9 +53,9 @@ public class EmployeeController {
         Employee employee = employeeService.searchEmployeeById(id);
         if (employee == null)
             throw new ResourceNotFoundException("The id received not exists: " + id);
-        employee.setName(employeeReceived.getName());
-        employee.setDepartment(employeeReceived.getDepartment());
-        employee.setSalary(employeeReceived.getSalary());
+        //employee.setName(employeeReceived.getName());
+        //employee.setDepartment(employeeReceived.getDepartment());
+        //employee.setSalary(employeeReceived.getSalary());
         employeeService.saveEmployee(employee);
         return ResponseEntity.ok(employee);
     }
